@@ -12,14 +12,11 @@ export default function Question(){
         />
     ))
 
-// console.log(Data.results);
-
-
 
 
 
     return(
-        <div>
+        <div className="questions-container">
             {ques}
         </div>
     )
