@@ -1,8 +1,7 @@
 import React from "react"
 
 export default function Options(props){
-    console.log(props);
     return(
-        <button className="options">{props.option}</button>
+        <button className="options" onClick={buttonClicked}>{props.option}</button>
     )
 }

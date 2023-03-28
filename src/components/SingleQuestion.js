@@ -3,17 +3,21 @@ import React from 'react'
 import Options from './Options'
 
 export default function(props){
-    console.log(props.option);
-    const option = props.option.map(prevValue => (
-        <Options 
-            option = {prevValue}
-        
-        />
-    ))
+    const option = props.option.map((prevValue, index) => { 
+        return (
+            <Options 
+                option = {prevValue}
+                id = {index}
+            />
+        )
+    })
     return(
-        <div className='questions-container'>
-            <p className='questions'> {props.que}</p>
-            {option}
+        <div className='question-container'>
+            <p className='question'> {props.que}</p>
+            <div className='options-container'>
+                {option}
+            </div>
+            <hr className='question-line'></hr>
         </div>
         
     )
